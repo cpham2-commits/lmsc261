@@ -1,3 +1,2 @@
-prompt("What is your name?");
-let nametoprint = "input"; 
-print("Hello, " + nametoprint + "!");
+let namePrint = prompt("what's your name?");
+print("Hello, " + namePrint + "!");
