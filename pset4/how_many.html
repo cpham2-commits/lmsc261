@@ -1,0 +1,32 @@
+let numCircles = prompt("how many circles");
+const maxRadius = w * 0.45;
+const radiusIncr = maxRadius / numCircles;
+const colours = [
+	"#EF998D",
+	"#F0AA75",
+	"#EEBB61",
+	"#E8776B",
+	"#E678B2",
+	"#C184D1",
+	"#77B1B6",
+	"#65D0A0",
+	"#66D69E"
+];
+
+for (let i = 0; i <= numCircles; i++){
+        let xPos = 300;
+        let yPos = 300;
+        let radius = radiusIncr * (i + 1);
+
+        ctx.beginPath();
+        ctx.arc(xPos,
+            yPos,
+            radius,
+            0,
+            Math.PI * 2,
+            true);
+        
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = colours[i];
+        ctx.stroke();
+    };

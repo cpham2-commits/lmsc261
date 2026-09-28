@@ -1,0 +1,17 @@
+for (let i = 0; i <= 256; i++){
+    let xPos = Math.random() * w;
+    let yPos = Math.random() * h;
+    let radius = Math.random() * 10;
+
+ctx.beginPath();
+ctx.arc(
+    xPos,
+    yPos,
+    radius,
+    0,
+    Math.PI * 2,
+    true);
+        
+ctx.fillStyle = "blue";
+ctx.fill();
+};
