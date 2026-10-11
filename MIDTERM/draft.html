@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<body>
+    <canvas width="600" height="600" id="canvas" style="width: 600px; height: 600px;"></canvas>
+</body>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const w = canvas.width, h = canvas.height;
+
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width *= dpr, canvas.height *= dpr;
+    ctx.scale(dpr, dpr);
+
+    const x = w / 2;
+    const y = h / 2;
+
+    ctx.beginPath();
+    ctx.arc(
+        x, 
+        y,
+        300, 
+        0, 
+        Math.PI * 2,
+        true
+    );
+    ctx.fillStyle = "red";
+    ctx.fill();
+
+function drawEnder(x, y, scale){
+// square middle
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 250 * scale, y + 250 * scale, 90 * scale, 90 * scale);
+
+// rect outside square
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 250 * scale, y + 340 * scale, 90 * scale, 30 * scale);
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 250 * scale, y + 220 * scale, 90 * scale, 30 * scale);
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 340 * scale, y + 250 * scale, 30 * scale, 90 * scale);
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 220 * scale, y + 250 * scale, 30 * scale, 90 * scale);
+
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 280 * scale, y + 190 * scale, 60 * scale, 30 * scale);
+
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 340 * scale, y + 340 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 370 * scale, y + 220 * scale, 30 * scale, 120 * scale);
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 340 * scale, y + 220 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 400 * scale, y + 250 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 220 * scale, y + 370 * scale, 120 * scale, 30 * scale);
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 220 * scale, y + 340 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 190 * scale, y + 280 * scale, 30 * scale, 90 * scale);
+    ctx.fillStyle = "#033E3E";
+    ctx.fillRect(x + 250 * scale, y + 400 * scale, 30 * scale, 30 * scale);
+
+    ctx.fillStyle = "#20B2AA";
+    ctx.fillRect(x + 250 * scale, y + 190 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#20B2AA";
+    ctx.fillRect(x + 220 * scale, y + 220 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#20B2AA";
+    ctx.fillRect(x + 190 * scale, y + 250 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#20B2AA";
+    ctx.fillRect(x + 370 * scale, y + 340 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#20B2AA";
+    ctx.fillRect(x + 340 * scale, y + 370 * scale, 30 * scale, 30 * scale);
+
+// tiff blue
+    ctx.fillStyle = "#81D8D0";
+    ctx.fillRect(x + 220 * scale, y + 190 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#81D8D0";
+    ctx.fillRect(x + 190 * scale, y + 220 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#81D8D0";
+    ctx.fillRect(x + 370 * scale, y + 370 * scale, 30 * scale, 30 * scale);
+
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 280 * scale, y + 160 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 340 * scale, y + 190 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 400 * scale, y + 220 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 430 * scale, y + 250 * scale, 30 * scale, 90 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 160 * scale, y + 280 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 190 * scale, y + 370 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 220 * scale, y + 400 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 250 * scale, y + 430 * scale, 90 * scale, 30 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 370 * scale, y + 400 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#045F5F";
+    ctx.fillRect(x + 400 * scale, y + 370 * scale, 30 * scale, 30 * scale);
+
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 310 * scale, y + 130 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 250 * scale, y + 160 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 190 * scale, y + 190 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 160 * scale, y + 250 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 130 * scale, y + 310 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 160 * scale, y + 340 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 190 * scale, y + 400 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 280 * scale, y + 400 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 400 * scale, y + 280 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 340 * scale, y + 160 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#307D7E";
+    ctx.fillRect(x + 400 * scale, y + 190 * scale, 30 * scale, 30 * scale);
+
+    ctx.fillStyle = "#3B9C9C";
+    ctx.fillRect(x + 250 * scale, y + 130 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#3B9C9C";
+    ctx.fillRect(x + 190 * scale, y + 160 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#3B9C9C";
+    ctx.fillRect(x + 160 * scale, y + 190 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#3B9C9C";
+    ctx.fillRect(x + 130 * scale, y + 250 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#3B9C9C";
+    ctx.fillRect(x + 310 * scale, y + 400 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#3B9C9C";
+    ctx.fillRect(x + 400 * scale, y + 310 * scale, 30 * scale, 60 * scale);
+
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 250 * scale, y + 460 * scale, 90 * scale, 30 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 340 * scale, y + 430 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 400 * scale, y + 400 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 430 * scale, y + 340 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 460 * scale, y + 250 * scale, 30 * scale, 90 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 430 * scale, y + 190 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 400 * scale, y + 160 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 100 * scale, y + 280 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 130 * scale, y + 340 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 160 * scale, y + 400 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#091E19";
+    ctx.fillRect(x + 190 * scale, y + 430 * scale, 60 * scale, 30 * scale);
+
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 340 * scale, y + 130 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 250 * scale, y + 100 * scale, 90 * scale, 30 * scale);
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 190 * scale, y + 130 * scale, 60 * scale, 30 * scale);
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 160 * scale, y + 160 * scale, 30 * scale, 30 * scale);
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 130 * scale, y + 190 * scale, 30 * scale, 60 * scale);
+    ctx.fillStyle = "#003333";
+    ctx.fillRect(x + 100 * scale, y + 250 * scale, 30 * scale, 30 * scale);
+};
+
+const numEnders = 3;
+const scale = 2 / numEnders;
+for (let i = 0; i < numEnders; i++) {
+    const xPos = (w * (i * 1)) / (numEnders * 2);
+    const yPos = (h * (i * 1)) / (numEnders * 2);
+    
+    drawEnder(xPos, yPos, scale);
+};
+
+</script>
