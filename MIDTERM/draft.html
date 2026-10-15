@@ -175,11 +175,11 @@ function drawEnder(x, y, scale){
     ctx.fillRect(x + 100 * scale, y + 250 * scale, 30 * scale, 30 * scale);
 };
 
-const numEnders = 3;
-const scale = 2 / numEnders;
+const numEnders = 1;
+const scale = 1 / numEnders;
 for (let i = 0; i < numEnders; i++) {
-    const xPos = (w * (i * 1)) / (numEnders * 2);
-    const yPos = (h * (i * 1)) / (numEnders * 2);
+    const xPos = (w * (i * 1)) / (numEnders * 1);
+    const yPos = (h * (i * 1)) / (numEnders * 1);
     
     drawEnder(xPos, yPos, scale);
 };
