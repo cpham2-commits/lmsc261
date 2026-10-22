@@ -27,161 +27,250 @@
     ctx.fillStyle = "red";
     ctx.fill();
 
-function drawEnder(x, y, scale){
-// square middle
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 250 * scale, y + 250 * scale, 90 * scale, 90 * scale);
+let enderVisible = true;
 
-// rect outside square
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 250 * scale, y + 340 * scale, 90 * scale, 30 * scale);
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 250 * scale, y + 220 * scale, 90 * scale, 30 * scale);
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 340 * scale, y + 250 * scale, 30 * scale, 90 * scale);
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 220 * scale, y + 250 * scale, 30 * scale, 90 * scale);
-
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 280 * scale, y + 190 * scale, 60 * scale, 30 * scale);
-
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 340 * scale, y + 340 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 370 * scale, y + 220 * scale, 30 * scale, 120 * scale);
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 340 * scale, y + 220 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 400 * scale, y + 250 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 220 * scale, y + 370 * scale, 120 * scale, 30 * scale);
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 220 * scale, y + 340 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 190 * scale, y + 280 * scale, 30 * scale, 90 * scale);
-    ctx.fillStyle = "#033E3E";
-    ctx.fillRect(x + 250 * scale, y + 400 * scale, 30 * scale, 30 * scale);
-
-    ctx.fillStyle = "#20B2AA";
-    ctx.fillRect(x + 250 * scale, y + 190 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#20B2AA";
-    ctx.fillRect(x + 220 * scale, y + 220 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#20B2AA";
-    ctx.fillRect(x + 190 * scale, y + 250 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#20B2AA";
-    ctx.fillRect(x + 370 * scale, y + 340 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#20B2AA";
-    ctx.fillRect(x + 340 * scale, y + 370 * scale, 30 * scale, 30 * scale);
-
-// tiff blue
-    ctx.fillStyle = "#81D8D0";
-    ctx.fillRect(x + 220 * scale, y + 190 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#81D8D0";
-    ctx.fillRect(x + 190 * scale, y + 220 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#81D8D0";
-    ctx.fillRect(x + 370 * scale, y + 370 * scale, 30 * scale, 30 * scale);
-
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 280 * scale, y + 160 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 340 * scale, y + 190 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 400 * scale, y + 220 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 430 * scale, y + 250 * scale, 30 * scale, 90 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 160 * scale, y + 280 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 190 * scale, y + 370 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 220 * scale, y + 400 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 250 * scale, y + 430 * scale, 90 * scale, 30 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 370 * scale, y + 400 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#045F5F";
-    ctx.fillRect(x + 400 * scale, y + 370 * scale, 30 * scale, 30 * scale);
-
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 310 * scale, y + 130 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 250 * scale, y + 160 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 190 * scale, y + 190 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 160 * scale, y + 250 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 130 * scale, y + 310 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 160 * scale, y + 340 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 190 * scale, y + 400 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 280 * scale, y + 400 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 400 * scale, y + 280 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 340 * scale, y + 160 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#307D7E";
-    ctx.fillRect(x + 400 * scale, y + 190 * scale, 30 * scale, 30 * scale);
-
-    ctx.fillStyle = "#3B9C9C";
-    ctx.fillRect(x + 250 * scale, y + 130 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#3B9C9C";
-    ctx.fillRect(x + 190 * scale, y + 160 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#3B9C9C";
-    ctx.fillRect(x + 160 * scale, y + 190 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#3B9C9C";
-    ctx.fillRect(x + 130 * scale, y + 250 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#3B9C9C";
-    ctx.fillRect(x + 310 * scale, y + 400 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#3B9C9C";
-    ctx.fillRect(x + 400 * scale, y + 310 * scale, 30 * scale, 60 * scale);
-
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 250 * scale, y + 460 * scale, 90 * scale, 30 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 340 * scale, y + 430 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 400 * scale, y + 400 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 430 * scale, y + 340 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 460 * scale, y + 250 * scale, 30 * scale, 90 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 430 * scale, y + 190 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 400 * scale, y + 160 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 100 * scale, y + 280 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 130 * scale, y + 340 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 160 * scale, y + 400 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#091E19";
-    ctx.fillRect(x + 190 * scale, y + 430 * scale, 60 * scale, 30 * scale);
-
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 340 * scale, y + 130 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 250 * scale, y + 100 * scale, 90 * scale, 30 * scale);
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 190 * scale, y + 130 * scale, 60 * scale, 30 * scale);
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 160 * scale, y + 160 * scale, 30 * scale, 30 * scale);
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 130 * scale, y + 190 * scale, 30 * scale, 60 * scale);
-    ctx.fillStyle = "#003333";
-    ctx.fillRect(x + 100 * scale, y + 250 * scale, 30 * scale, 30 * scale);
+function drawRect(color, x, y, rectX, rectY, width, height, scale) {
+    ctx.fillStyle = color;
+    ctx.fillRect(
+        x + rectX * scale,
+        y + rectY * scale,
+        width * scale,
+        height * scale
+    );
 };
 
+//ender youtube sound effect
+const enderSound = new Audio("enderfx.mp3");
+enderSound.volume = 1;
+
+// ender pearl
+function drawEnder(x, y, scale) {
+    const shapes = [
+        // middle square
+        ["#091E19", 250, 250, 90, 90],
+
+        // outer square
+        ["#003333", 250, 340, 90, 30],
+        ["#003333", 250, 220, 90, 30],
+        ["#003333", 340, 250, 30, 90],
+        ["#003333", 220, 250, 30, 90],
+
+        // dark teal
+        ["#033E3E", 280, 190, 60, 30],
+        ["#033E3E", 340, 340, 30, 30],
+        ["#033E3E", 370, 220, 30, 120],
+        ["#033E3E", 340, 220, 30, 30],
+        ["#033E3E", 400, 250, 30, 30],
+        ["#033E3E", 220, 370, 120, 30],
+        ["#033E3E", 220, 340, 30, 30],
+        ["#033E3E", 190, 280, 30, 90],
+        ["#033E3E", 250, 400, 30, 30],
+
+        // bright teal
+        ["#20B2AA", 250, 190, 30, 30],
+        ["#20B2AA", 220, 220, 30, 30],
+        ["#20B2AA", 190, 250, 30, 30],
+        ["#20B2AA", 370, 340, 30, 30],
+        ["#20B2AA", 340, 370, 30, 30],
+
+        // tiffany blue
+        ["#81D8D0", 220, 190, 30, 30],
+        ["#81D8D0", 190, 220, 30, 30],
+        ["#81D8D0", 370, 370, 30, 30],
+
+        // dark cyan
+        ["#045F5F", 280, 160, 60, 30],
+        ["#045F5F", 340, 190, 60, 30],
+        ["#045F5F", 400, 220, 30, 30],
+        ["#045F5F", 430, 250, 30, 90],
+        ["#045F5F", 160, 280, 30, 60],
+        ["#045F5F", 190, 370, 30, 30],
+        ["#045F5F", 220, 400, 30, 30],
+        ["#045F5F", 250, 430, 90, 30],
+        ["#045F5F", 370, 400, 30, 30],
+        ["#045F5F", 400, 370, 30, 30],
+
+        // greenish blue
+        ["#307D7E", 310, 130, 30, 30],
+        ["#307D7E", 250, 160, 30, 30],
+        ["#307D7E", 190, 190, 30, 30],
+        ["#307D7E", 160, 250, 30, 30],
+        ["#307D7E", 130, 310, 30, 30],
+        ["#307D7E", 160, 340, 30, 60],
+        ["#307D7E", 190, 400, 30, 30],
+        ["#307D7E", 280, 400, 30, 30],
+        ["#307D7E", 400, 280, 30, 30],
+        ["#307D7E", 340, 160, 60, 30],
+        ["#307D7E", 400, 190, 30, 30],
+
+        // deep sea cyan
+        ["#3B9C9C", 250, 130, 60, 30],
+        ["#3B9C9C", 190, 160, 60, 30],
+        ["#3B9C9C", 160, 190, 30, 60],
+        ["#3B9C9C", 130, 250, 30, 60],
+        ["#3B9C9C", 310, 400, 60, 30],
+        ["#3B9C9C", 400, 310, 30, 60],
+
+        // pine black
+        ["#091E19", 250, 460, 90, 30],
+        ["#091E19", 340, 430, 60, 30],
+        ["#091E19", 400, 400, 30, 30],
+        ["#091E19", 430, 340, 30, 60],
+        ["#091E19", 460, 250, 30, 90],
+        ["#091E19", 430, 190, 30, 60],
+        ["#091E19", 400, 160, 30, 30],
+        ["#091E19", 100, 280, 30, 60],
+        ["#091E19", 130, 340, 30, 60],
+        ["#091E19", 160, 400, 30, 30],
+        ["#091E19", 190, 430, 60, 30],
+
+        // dark green
+        ["#003333", 340, 130, 60, 30],
+        ["#003333", 250, 100, 90, 30],
+        ["#003333", 190, 130, 60, 30],
+        ["#003333", 160, 160, 30, 30],
+        ["#003333", 130, 190, 30, 60],
+        ["#003333", 100, 250, 30, 30]
+    ];
+
+    for (const [color, rx, ry, width, height] of shapes) {
+        drawRect(color, x, y, rx, ry, width, height, scale);
+    };
+};
+
+//keeping it centered and scaled
 const numEnders = 1;
 const scale = 1 / numEnders;
+
 for (let i = 0; i < numEnders; i++) {
-    const xPos = (w * (i * 1)) / (numEnders * 1);
-    const yPos = (h * (i * 1)) / (numEnders * 1);
-    
+    const xPos = (w - 600 * scale) / 2;
+    const yPos = (h - 600 * scale) / 2;
+
     drawEnder(xPos, yPos, scale);
 };
+
+// particles like in minecraft when it is clicked
+const particles = [];
+
+//appearence of particles
+function createParticle(x, y) { 
+    particles.push({
+
+        // where particles appear
+        x: Math.random() * w,
+        y: Math.random() * h,
+
+        //random speed
+        vx: (Math.random() - 0.5) * 3,
+        vy: -Math.random() * 2 - 0.5,
+
+        // random size
+        size: Math.random() * 4 + 2,
+
+        // how long it lasts
+        life: 2
+    });
+};
+
+//the animation part 
+function animateParticles() {
+    for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+
+        // Move the particle
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Fade out
+        p.life -= 0.015;
+
+        // Remove particles that have disappeared
+        if (p.life <= 0) {
+            particles.splice(i, 1);
+            continue;
+        };
+
+        // Draw the particle
+        ctx.globalAlpha = p.life;
+        ctx.fillStyle = "#20B2AA";
+        ctx.shadowColor = "#20B2AA";
+        ctx.shadowBlur = 10;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+
+    // Reset drawing effects
+    ctx.globalAlpha = 1;
+    ctx.shadowBlur = 0;
+};
+
+function burstParticles(x, y) {
+    for (let i = 0; i < 35; i++) {
+        createParticle(
+            x + (Math.random() - 0.5) * 100,
+            y + (Math.random() - 0.5) * 100
+        );
+    }
+};
+
+canvas.addEventListener("click", function(event) {
+    const rect = canvas.getBoundingClientRect();
+
+    // Convert mouse coordinates to canvas coordinates
+    const mouseX =
+        (event.clientX - rect.left) * (w / rect.width);
+    const mouseY =
+        (event.clientY - rect.top) * (h / rect.height);
+
+    // Center of the Ender Pearl
+    const pearlX = w / 2;
+    const pearlY = h / 2;
+
+    // Only trigger if the click is near the pearl
+    const dx = mouseX - pearlX;
+    const dy = mouseY - pearlY;
+
+    if (dx * dx + dy * dy < 200 * 200 && enderVisible) {
+        enderSound.currentTime = 0;
+        enderSound.play();
+
+        //stop sound
+        setTimeout(() => {
+            enderSound.pause();
+        }, 2000);
+
+        burstParticles(pearlX, pearlY);
+
+        // dissapear
+        enderVisible = false;
+    };
+}); 
+
+function animate() {
+    // Clear the previous frame
+    ctx.clearRect(0, 0, w, h);
+
+    // Draw the red background circle
+    ctx.beginPath();
+    ctx.arc(w / 2, h / 2, 300, 0, Math.PI * 2);
+    ctx.fillStyle = "red";
+    ctx.fill();
+
+    // Draw your Ender Pearl in the center
+    
+    if (enderVisible) {
+        drawEnder(w / 2 - 295, h / 2 - 295, 1);
+    };
+
+    // Draw moving particles
+    animateParticles();
+
+    // Repeat the animation
+    requestAnimationFrame(animate);
+};
+
+animate();
 
 </script>
