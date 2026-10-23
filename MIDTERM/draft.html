@@ -73,7 +73,7 @@ function drawEnder(x, y, scale) {
         ["#20B2AA", 370, 340, 30, 30],
         ["#20B2AA", 340, 370, 30, 30],
 
-        // tiffany blue
+        // tiff blue
         ["#81D8D0", 220, 190, 30, 30],
         ["#81D8D0", 190, 220, 30, 30],
         ["#81D8D0", 370, 370, 30, 30],
@@ -184,7 +184,7 @@ function animateParticles() {
         // Fade out
         p.life -= 0.015;
 
-        // Remove particles that have disappeared
+        // remove particles that disappeared
         if (p.life <= 0) {
             particles.splice(i, 1);
             continue;
@@ -249,17 +249,16 @@ canvas.addEventListener("click", function(event) {
 }); 
 
 function animate() {
-    // Clear the previous frame
+    // clear the previous frame
     ctx.clearRect(0, 0, w, h);
 
-    // Draw the red background circle
+    // draw the red background circle
     ctx.beginPath();
     ctx.arc(w / 2, h / 2, 300, 0, Math.PI * 2);
     ctx.fillStyle = "red";
     ctx.fill();
 
-    // Draw your Ender Pearl in the center
-    
+    // draw pearl in the center
     if (enderVisible) {
         drawEnder(w / 2 - 295, h / 2 - 295, 1);
     };
@@ -267,7 +266,7 @@ function animate() {
     // Draw moving particles
     animateParticles();
 
-    // Repeat the animation
+    // repeat animation
     requestAnimationFrame(animate);
 };
 
